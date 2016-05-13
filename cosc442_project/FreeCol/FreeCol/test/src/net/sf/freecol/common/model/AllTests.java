@@ -65,6 +65,8 @@ public class AllTests {
         suite.addTestSuite(TradeRouteTest.class);
         suite.addTestSuite(UnitTest.class);
         suite.addTestSuite(UnitTypeChangeTest.class);
+        
+        suite.addTestSuite(HistoryEventTest.class); //Adding my created test class to suite
         //$JUnit-END$
         return suite;
     }

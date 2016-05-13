@@ -67,19 +67,20 @@ public enum Stance implements Named {
      */
     public Stance getStanceFromTension(Tension tension) {
         int value = tension.getValue();
+        //Note Tension.DELTA by default is set to 10
         switch (this) {
         case WAR: // Cease fire if tension decreases
-            if (value <= Tension.Level.CONTENT.getLimit()-Tension.DELTA) {
+            if (value <= Tension.Level.CONTENT.getLimit()-Tension.DELTA) { // Content = 600
                 return Stance.CEASE_FIRE;
             }
             break;
         case CEASE_FIRE: // Peace if tension decreases
-            if (value <= Tension.Level.HAPPY.getLimit()-Tension.DELTA) {
+            if (value <= Tension.Level.HAPPY.getLimit()-Tension.DELTA) { // Happy = 100
                 return Stance.PEACE;
             }
             // Fall through
         case ALLIANCE: case PEACE: // War if tension increases
-            if (value > Tension.Level.HATEFUL.getLimit()+Tension.DELTA) {
+            if (value > Tension.Level.HATEFUL.getLimit()+Tension.DELTA) { // Hateful = 1000
                 return Stance.WAR;
             }
             break;
