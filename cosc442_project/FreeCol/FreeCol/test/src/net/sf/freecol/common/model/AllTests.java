@@ -69,6 +69,7 @@ public class AllTests {
         //Adding my created test classes to suite below
         suite.addTestSuite(HistoryEventTest.class);
         suite.addTestSuite(StanceTest.class); 
+        suite.addTestSuite(AbilityTest.class);
         //$JUnit-END$
         return suite;
     }
