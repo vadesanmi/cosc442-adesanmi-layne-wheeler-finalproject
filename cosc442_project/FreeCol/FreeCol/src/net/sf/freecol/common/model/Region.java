@@ -54,7 +54,8 @@ public class Region extends FreeColGameObject implements Nameable {
 
     /** The type of region. */
     public static enum RegionType implements Named {
-        OCEAN(false),
+        OCEAN(false), // Note: Fixed potential error here. Was originally named "OCEFAN". When opening Call Hierarchy no
+        			  // members calling "OCEFAN" exists. After changing to "OCEAN" there were multiple members accessing the variable. 
         COAST(false),
         LAKE(false),
         RIVER(true),
