@@ -71,6 +71,7 @@ public class AllTests {
         suite.addTestSuite(StanceTest.class); 
         suite.addTestSuite(AbilityTest.class);
         suite.addTestSuite(RegionTest.class);
+        suite.addTestSuite(OccupationTest.class);
         //$JUnit-END$
         return suite;
     }
