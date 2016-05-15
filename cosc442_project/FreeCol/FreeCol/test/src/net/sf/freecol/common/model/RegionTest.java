@@ -10,9 +10,9 @@ public class RegionTest extends FreeColTestCase {
 		
 		Game g = new Game();
 		
-		Region r = new Region(g);
+		Region r = new Region(g, "ID");
 		
-		Player p = new Player(g);
+		Player p = new Player(g, "ID2");
 		
 		r.setDiscoveredBy(p);
 		
@@ -26,8 +26,8 @@ public class RegionTest extends FreeColTestCase {
 		
 		Game g = new Game();
 		
-		Region r = new Region(g);
-		Region p = new Region(g);
+		Region r = new Region(g, "ID");
+		Region p = new Region(g, "ID2");
 		
 		r.setParent(p);
 		
@@ -41,10 +41,10 @@ public class RegionTest extends FreeColTestCase {
 		
 		Game g = new Game();
 		
-		Region r = new Region(g);
-		Region c = new Region(g);
-		Region c1 = new Region(g);
-		Region c2 = new Region(g);
+		Region r = new Region(g, "ID");
+		Region c = new Region(g, "ID2");
+		Region c1 = new Region(g, "ID3");
+		Region c2 = new Region(g, "ID4");
 		
 		r.addChild(c);
 		r.addChild(c1);
@@ -61,8 +61,8 @@ public class RegionTest extends FreeColTestCase {
 		
 		Game g = new Game();
 		
-		Region r = new Region(g);
-		Region n = new Region(g);
+		Region r = new Region(g,"ID");
+		Region n = new Region(g,"ID2");
 		
 		r.addChild(n);
 		
@@ -75,7 +75,7 @@ public class RegionTest extends FreeColTestCase {
 		
 		Game g = new Game();
 		
-		Region r = new Region(g);	
+		Region r = new Region(g,"ID");	
 		
 		Turn t = new Turn(10);
 		
