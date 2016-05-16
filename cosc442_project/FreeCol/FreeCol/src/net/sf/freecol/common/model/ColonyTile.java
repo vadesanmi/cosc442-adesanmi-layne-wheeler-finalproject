@@ -43,7 +43,8 @@ public class ColonyTile extends WorkLocation {
 
     @SuppressWarnings("unused")
     private static final Logger logger = Logger.getLogger(ColonyTile.class.getName());
-
+    
+    /**The way a unit can be changed */
     public static final String UNIT_CHANGE = "UNIT_CHANGE";
 
     /** The maximum number of units a ColonyTile can hold. */
@@ -530,7 +531,7 @@ public class ColonyTile extends WorkLocation {
      */
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder(64);
+        final StringBuilder sb = new StringBuilder(64);
         sb.append("[").append(getId())
             .append(" ").append(getWorkTile())
             .append("/").append(getColony().getName())
