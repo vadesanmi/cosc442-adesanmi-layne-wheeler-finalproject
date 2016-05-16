@@ -546,7 +546,10 @@ public class Game extends FreeColGameObject {
      */
     public List<Player> getOtherLivePlayers(Player... players) {
         List<Player> result = getLivePlayers(null);
-        for (Player other : players) result.remove(other);
+        for (Player other : players) {
+        	result.remove(other);
+        
+        }
         return result;
     }
 
@@ -1007,7 +1010,10 @@ public class Game extends FreeColGameObject {
     public Settlement getSettlementByName(String name) {
         for (Player p : getLivePlayers(null)) {
             for (Settlement s : p.getSettlements()) {
-                if (name.equals(s.getName())) return s;
+                if (name.equals(s.getName())) 
+                {
+                	return s;
+                }
             }
         }
         return null;
@@ -1291,9 +1297,13 @@ public class Game extends FreeColGameObject {
         List<Player> players = toSortedList(getPlayers());
         Player unknown = getUnknownEnemy();
         if (unknown != null) players.add(unknown);
-        for (Player p : players) p.toXML(xw);
+        for (Player p : players){
+        	p.toXML(xw);
+        }
 
-        if (map != null) map.toXML(xw);
+        if (map != null) {
+        	map.toXML(xw);
+        }
     }
 
     /**
